@@ -31,18 +31,16 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long IdUser;
+    @Column(unique = true)
     private String email;
     private String name;
-    @Column(name = "last_name")
     private String lastName;
     private Integer age;
     private String password;
-    @Column(name = "res_password")
     private String resPassword;
     private Boolean enable;
     private String picture;
     private String rol;
-    @Column(name = "create_at")
     private LocalDateTime createAt;
     @OneToMany(mappedBy = "user")
     private List<Suggestions> listSugestions;
