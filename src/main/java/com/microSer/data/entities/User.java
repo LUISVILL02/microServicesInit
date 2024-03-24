@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -43,7 +42,7 @@ public class User {
     private String rol;
     private LocalDateTime createAt;
     @OneToMany(mappedBy = "user")
-    private List<Suggestions> listSugestions;
+    private List<Suggestion> listSugestions;
     @OneToMany(mappedBy = "user")
     private List<Message> messages;
     @ManyToMany(fetch = FetchType.LAZY)
